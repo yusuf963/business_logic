@@ -1,9 +1,9 @@
 const mongoose = require('mongoose')
 const filmSchema = mongoose.Schema({
-  film_name: {
+  film_type: {
     type: String
   },
-  film_type: {
+  film_name: {
     type: String
   },
   film_year: {
