@@ -1,11 +1,11 @@
 const mongoose = require('mongoose')
 require('dotenv').config();
+console.log(process.env.DBURI)
 
-const URI = 'mongodb+srv://uni-lab2:uni-lab2@cluster0.0yf9duy.mongodb.net/uni?retryWrites=true&w=majority'
 
 const connectToDB = () => {
   try {
-    mongoose.connect(URI, () => {
+    mongoose.connect(process.env.DBURI, () => {
       console.log('connection to DB is established')
     })
   } catch (error) {
