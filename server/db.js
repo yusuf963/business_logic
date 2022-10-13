@@ -1,11 +1,9 @@
 const mongoose = require('mongoose')
 require('dotenv').config();
-console.log(process.env.DBURI)
 
-
-const connectToDB = () => {
+const connectToDB = async () => {
   try {
-    mongoose.connect(process.env.DBURI, () => {
+    await mongoose.connect(process.env.DBURI, () => {
       console.log('connection to DB is established')
     })
   } catch (error) {
