@@ -1,14 +1,14 @@
 from flask import Flask, render_template
-app = Flask(__name__,template_folder='static')
+app = Flask(__name__,template_folder='templates')
 
 @app.route("/")
 def home():
     return render_template("home.html")
 
-@app.route("/flask")
+@app.route("/about")
 def get_user():
-    return "<p>Hello, World from flask!</p>"
+    return render_template("about.html")
 
-@app.route("/fl")
+@app.route("/contact")
 def post_user():
-    return "<p>Hello, World from flaskcew!</p>"
+    return render_template("contact.html")
