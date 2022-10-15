@@ -41,7 +41,8 @@
       <hr>
       {% for todo in todos %}
       <div class="todo">
-        <p>{{ todo['content'] }} <i>({{ todo['degree']}})</i></p>
+        <p>{{ todo['name'] }} <i>({{ todo['is_done']}})</i></p>
+        <p>{{ todo['_id'] }} <i>({{ todo['created_at']}})</i></p>
       </div>
       {% endfor %}
 
