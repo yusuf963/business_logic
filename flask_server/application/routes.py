@@ -8,18 +8,19 @@ from datetime import datetime
 def index():
     return 'hello'
 
-@app.route('/test')
+# @app.route('/test')
+# def get_todos():
+#     todos = []
+#     for todo in db.testcol.find().sort("date_created", -1):
+#         todo["_id"] = str(todo["_id"])
+#         todos.append(todo)
+#     return render_template('home.html', todos=todos)
+
+@app.route('/test1')
 def get_todos():
     todos = []
     for todo in db.testcol.find().sort("date_created", -1):
         todo["_id"] = str(todo["_id"])
         todos.append(todo)
-    return render_template('home.html', todos=todos)
-
-# @app.route('/test1')
-# def get_data():
-#     todos = []
-#     for todo in db.testcol.find().sort("date_created", -1):
-#         todo["_id"] = str(todo["_id"])
-#         todos.append(todo)
-#     return render_template("home.html")
+    # return render_template("index.html", todos=todos)
+    return render_template('test.html', todos=todos)
